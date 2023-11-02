@@ -9,7 +9,7 @@ const TodoContainer = () => {
   return (
     <div className='todo-container'>
         <TodoAdder todos={todos} setTodos={setTodos}/>
-        <Todolist todos={todos}/>
+        <Todolist todos={todos} setTodos={setTodos}/>
     </div>
   )
 }

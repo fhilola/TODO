@@ -1,4 +1,60 @@
-.todo-item{
+.todo-item {
     background-color: #000;
     padding: 16px;
+    cursor: pointer;
+
+    .item__content-wrapper {
+        display: flex;
+        align-items: center;
+        transition: .2s;
+        padding: 5px 0;
+        h3 {
+            flex: 1;
+        }
+        &--active{
+            padding: 5;
+            background-color: #04ac04;
+            h3{
+            text-decoration: line-through;
+            text-decoration-thickness: 3px #04ac04;
+            }
+        }
+    }
+}
+
+.item__actions {
+    margin-top: 0;
+    height: 40px;
+    margin-top: 10px;
+    overflow: hidden;
+    height: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 0 10px;
+    transition: .2s;
+
+    button {
+        flex: 1;
+        border: none;
+        color: #fff;
+
+        &:first-of-type {
+            background-color: green;
+        }
+
+        &:nth-of-type(2) {
+            background-color: gold;
+            color: #000;
+        }
+
+        &:last-of-type {
+            background-color: red;
+        }
+    }
+
+    &--active {
+        padding: 5px;
+        height: 40px;
+        margin-top: 10px;
+    }
 }
